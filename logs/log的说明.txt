@@ -1,0 +1,14 @@
+https://github.com/expressjs/morgan
+
+上述网址里面的
+Predefined Formats
+
+在express框架下，
+里面有很多不同的环境配置下 输出日志的 内容   映射到：：：：app.use(logger('dev'))
+
+比如：
+    dev
+        :remote-addr :remote-user :method :url HTTP/:http-version :status :res[content-length] - :response-time ms
+
+    combined
+        :remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"
