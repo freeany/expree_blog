@@ -1,7 +1,7 @@
 
 const {exec,escape } = require('../db/mysql')
 
-// 防止xss攻击
+// 使用了xss包防止xss攻击 
 const xss = require('xss')
 
 // 定义处理获取所有的博客列表数据的函数
@@ -18,11 +18,8 @@ const getList = (keyWords,author) => {
 
 // 定义处理获取指定id博客列表的数据的函数
 const getDetail = (id) => {
-
     id = escape(id)
-
     let sql = `select * from blogs where id=${id}`
-    
     return exec(sql)
 }
 
